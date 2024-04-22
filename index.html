@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="JP">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タグイレーサー</title>
+    <link rel="stylesheet" href="style.css?202403041106">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body id="app" v-cloak>
+
+    <header>
+        <h1>タグイレーサー</h1>
+    </header>
+    <main class="tag-eraser-main" @submit="erase">
+        <form>
+            <div><textarea name="rawHTML" id="rawHTML" v-model="rawHTML" class="html-io" required
+                    placeholder="HTMLをここに入力"></textarea>
+            </div>
+            <div class="process-commands">
+                <div class="erase-button-wrap">
+                    <button class="erase-button eraser-btn" type="button" @click="getHtmlFromUrl">URLから取得</button>
+                </div>
+                <div class="process-options">
+                    <div class="process-option">
+                        <label for="isEraseScriptBody"><input type="checkbox" v-model="isEraseScriptBody"
+                                id="isEraseScriptBody">
+                            <span>Scriptタグの中身を消す</span></label>
+                        </label>
+                    </div>
+                    <div class="process-option">
+                        <label for="isEraseStyleBody"><input type="checkbox" v-model="isEraseStyleBody"
+                                id="isEraseStyleBody">
+                            <span>Styleタグの中身を消す</span></label>
+                        </label>
+                    </div>
+                    <div class="process-option">
+                        <label for="isEraseComment"><input type="checkbox" v-model="isEraseComment" id="isEraseComment">
+                            <span>コメントを消す</span></label>
+                        </label>
+                    </div>
+                    <div class="process-option">
+                        <label for="isEraseSpace"><input type="checkbox" v-model="isEraseSpace" id="isEraseSpace">
+                            <span>連続する改行、空白を消す</span></label>
+                        </label>
+                    </div>
+                </div>
+                <div class="erase-button-wrap">
+                    <button class="erase-button eraser-btn" type="submit">実行</button>
+                    <button class="clear-button eraser-btn" type="button" @click="clear">クリア</button>
+                    <button class="copy-button eraser-btn" type="button" @click="copy"
+                        v-bind:disabled="resultHTML == ''">コピー</button>
+                    <button class="download-button eraser-btn" type="button" @click="download"
+                        v-bind:disabled="resultHTML == ''">ダウンロード</button>
+                </div>
+            </div>
+            <div><textarea name="resultHTML" id="resultHTML" v-model="resultHTML" readonly placeholder="結果がここに表示されます"
+                    class="html-io"></textarea>
+            </div>
+        </form>
+    </main>
+    <script src="https://unpkg.com/vue@3.4.23/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="./index.js?202403041106"></script>
+</body>
+
+</html>

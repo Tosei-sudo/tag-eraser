@@ -1,0 +1,126 @@
+header {
+    background-color: rgb(255, 115, 0);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0 0;
+    padding: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background-color: #dfefff;
+}
+
+.tag-eraser-main {
+    padding: 12px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.html-io {
+    resize: none;
+    height: 50vh;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 4px;
+    border: 1px solid navy;
+    padding: 6px;
+}
+
+.process-commands {
+    /* margin: 12px 0 0; */
+    font-size: 1.2rem;
+    /* can not select */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    padding: 12px 6px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.process-options {
+    margin: 12px 0;
+}
+
+.process-option {}
+
+.process-option label {
+    cursor: pointer;
+}
+
+.process-option input {
+    margin-right: 12px;
+}
+
+.erase-button-wrap {
+    text-align: center;
+}
+
+.eraser-btn {
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+}
+
+.eraser-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.eraser-btn:disabled:hover {
+    background-color: #ccc;
+}
+
+.erase-button {
+    background-color: blue;
+}
+
+.erase-button:hover {
+    background-color: navy;
+}
+
+.clear-button {
+    background-color: red;
+    margin-left: 12px;
+}
+
+.clear-button:hover {
+    background-color: crimson;
+}
+
+.copy-button {
+    background-color: green;
+    margin-left: 12px;
+}
+
+.copy-button:hover {
+    background-color: darkgreen;
+}
+
+.download-button {
+    background-color: orange;
+    margin-left: 12px;
+}
+
+.download-button:hover {
+    background-color: darkorange;
+}
